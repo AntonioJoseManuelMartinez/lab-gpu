@@ -1,0 +1,27 @@
+Lanzando pi-gpu-alumno14.ipynb con N=10000000
+N = 10000000
+float32
+19.1 ms ± 797 μs per loop (mean ± std. dev. of 3 runs, 10 loops each)
+
+ 	 Computing pi with numpy: 
+
+	 For 10000000 trials, pi = 3.141176
+
+N = 10000000
+dtype en GPU: float32
+
+	Computing pi with CuPy (GPU):
+
+	For 10000000 trials, pi = 3.141821
+
+Tiempo CuPy (solo cálculo en GPU):
+calc_pi_cupy        :    CPU:    70.739 us   +/-  3.087 (min:    68.140 / max:    75.077) us     GPU-0:   753.024 us   +/-  1.811 (min:   751.680 / max:   755.584) us
+N = 10000000
+dtype x (CPU): float32
+
+	Computing pi with Numba GPU (@vectorize):
+
+	For 10000000 trials, pi = 3.141176
+	Elapsed time (one run): 0.1461 s
+
+15.5 ms ± 40.1 μs per loop (mean ± std. dev. of 3 runs, 100 loops each)

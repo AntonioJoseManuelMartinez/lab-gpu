@@ -1,0 +1,19 @@
+#!/bin/bash
+#SBATCH -p bohr-gpu
+#SBATCH -J pi_gpu
+#SBATCH --chdir=/home/alumno14/lab-gpu
+#SBATCH --output=pi-gpu_%j.out        # Fichero de salida
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mail-type=NONE
+
+module load anaconda/2025.06
+
+echo "Lanzando pi-gpu-alumno14.ipynb con N=$1"
+
+# Usamos el intérprete de ipython
+ipython pi-gpu-alumno14.ipynb "$1"
+
+
+
+
