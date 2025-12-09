@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH -p bohr-gpu
+#SBATCH -J matmul_torch
+#SBATCH --chdir=/home/alumno14/lab-gpu
+#SBATCH --output=matrix-mult_%j.out
+#SBATCH --ntasks=1
+#SBATCH --mail-type=NONE
+
+module load anaconda/2025.06
+
+echo "Lanzando matrix-mult-alumno14.ipynb con n=$1"
+ipython matrix-mult-alumno14.ipynb "$1"
+
+echo "Trabajo finalizado"

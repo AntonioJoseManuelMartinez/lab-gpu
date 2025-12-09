@@ -1,0 +1,13 @@
+Lanzando matrix-mult-alumno14.ipynb con n=7000
+Tamaño de las matrices (n) leído por línea de comandos: 7000
+569 ms ± 1.4 ms per loop (mean ± std. dev. of 2 runs, 1 loop each)
+Result shape (Numpy): (7000, 7000)
+Result type (Numpy): float32
+Usando dispositivo: cuda
+Tamaño de las matrices (n) en PyTorch: 7000
+Midiendo tiempo de torch.matmul(A_t, B_t)...
+50.4 ms ± 5.86 μs per loop (mean ± std. dev. of 2 runs, 10 loops each)
+Result shape (PyTorch): torch.Size([7000, 7000])
+Result type (PyTorch): torch.float32
+Stored on device: cuda:0
+Trabajo finalizado
